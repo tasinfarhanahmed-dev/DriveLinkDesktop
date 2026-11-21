@@ -25,7 +25,7 @@ Pre-compiled directly from the open-source code for Windows 10/11 (64-bit) with 
 - **SHA-256 Checksum:** `2b0e0ee298a1236091ca8c1d46e3de4f721b104ac0461665ebe4506f3a038a2b`
 - **VirusTotal Scan:** [View 0/66 Clean Scan Report](https://virustotal.com)
 
-> 💡 *This build is 100% free. If it saved you time, you can leave an optional tip via [itch.io (Pay What You Want)]((https://farhan-designs4.itch.io/drivelink-desktop)).*
+> 💡 *This build is 100% free. If it saved you time, you can leave an optional tip via [itch.io (Pay What You Want)](https://farhan-designs4.itch.io/drivelink-desktop)*
 
 ---
 
