@@ -1,19 +1,25 @@
 ## 🛡️ Verified Clean Windows 64-bit Portable Build
 
-[![GitHub Actions Build](https://github.com)](https://github.com)
+[![VirusTotal](https://shields.io)](https://virustotal.com)
 [![GitHub Release](https://shields.io)](https://github.com)
-[![Support on itch.io](https://shields.io)](https://itch.io)
+[![Support on itch.io](https://shields.io)](farhan-designs4.itch.io/drivelink-desktop)
 
-Built automatically in the cloud via **GitHub Actions** directly from this repository's visible source code—proving 100% transparency with zero manual tampering and no admin installation required.
+Pre-compiled directly from the open-source code for Windows 10/11 (64-bit) with zero modifications and no admin installation required.
 
 ### Quick Start
 1. **Install Prerequisite:** Download and install the official signed **vJoy Virtual Joystick Driver** from [vJoy on SourceForge](https://sourceforge.net).
 2. **Download & Extract:** Grab **`DriveLinkDesktop-Win64-Portable.zip`** from [GitHub Releases](https://github.com) or [itch.io](https://itch.io) and extract the folder.
 3. **Run:** Double-click **`DriveLinkDesktop.exe`**.
 
+### Security & VirusTotal Verification (0/66 Clean)
+- **Archive:** `DriveLinkDesktop-Win64-Portable.zip` (3.19 MB)
+- **SHA-256 Checksum:** `2b0e0ee298a1236091ca8c1d46e3de4f721b104ac0461665ebe4506f3a038a2b`
+- **VirusTotal Scan:** [View 0/66 Clean Scan Report](https://virustotal.com)
+
 > 💡 *This build is 100% free. If it saved you time, you can leave an optional tip via [itch.io (Pay What You Want)](https://itch.io).*
 
 ---
+
 
 # DriveLink Desktop
 
