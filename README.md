@@ -1,8 +1,16 @@
 ## 🛡️ Verified Clean Windows 64-bit Portable Build
 
-[![VirusTotal](https://shields.io)](https://virustotal.com)
-[![GitHub Release](https://shields.io)](https://github.com)
-[![Support on itch.io](https://shields.io)](farhan-designs4.itch.io/drivelink-desktop)
+<p>
+  <a href="https://virustotal.com">
+    <img src="https://shields.io" alt="VirusTotal 0/66 Clean">
+  </a>
+  <a href="https://github.com">
+    <img src="https://shields.io" alt="GitHub Download">
+  </a>
+  <a href="https://itch.io">
+    <img src="https://shields.io" alt="Support on itch.io">
+  </a>
+</p>
 
 Pre-compiled directly from the open-source code for Windows 10/11 (64-bit) with zero modifications and no admin installation required.
 
