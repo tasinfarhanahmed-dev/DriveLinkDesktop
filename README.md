@@ -15,8 +15,9 @@
 Pre-compiled directly from the open-source code for Windows 10/11 (64-bit) with zero modifications and no admin installation required.
 
 ### Quick Start
-1. **Install Prerequisite:** Download and install the official signed **vJoy Virtual Joystick Driver** from [vJoy on SourceForge](https://sourceforge.net).
-2. **Download & Extract:** Grab **`DriveLinkDesktop-Win64-Portable.zip`** from [GitHub Releases](https://github.com) or [itch.io](https://itch.io) and extract the folder.
+1. **Install Prerequisite:** Download and install the official signed **vJoy Virtual Joystick Driver** from [vJoy on SourceForge](https://sourceforge.net/projects/vjoystick/)
+2. **Download & Extract:** Grab **`DriveLinkDesktop-Win64-Portable.zip`** from [GitHub Releases](https://github.com/tasinfarhanahmeddev/DriveLinkDesktop/releases/latest)
+ or [itch.io](https://farhan-designs4.itch.io/drivelink-desktop) and extract the folder.
 3. **Run:** Double-click **`DriveLinkDesktop.exe`**.
 
 ### Security & VirusTotal Verification (0/66 Clean)
