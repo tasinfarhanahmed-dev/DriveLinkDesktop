@@ -1,3 +1,20 @@
+## 🛡️ Verified Clean Windows 64-bit Portable Build
+
+[![GitHub Actions Build](https://github.com)](https://github.com)
+[![GitHub Release](https://shields.io)](https://github.com)
+[![Support on itch.io](https://shields.io)](https://itch.io)
+
+Built automatically in the cloud via **GitHub Actions** directly from this repository's visible source code—proving 100% transparency with zero manual tampering and no admin installation required.
+
+### Quick Start
+1. **Install Prerequisite:** Download and install the official signed **vJoy Virtual Joystick Driver** from [vJoy on SourceForge](https://sourceforge.net).
+2. **Download & Extract:** Grab **`DriveLinkDesktop-Win64-Portable.zip`** from [GitHub Releases](https://github.com) or [itch.io](https://itch.io) and extract the folder.
+3. **Run:** Double-click **`DriveLinkDesktop.exe`**.
+
+> 💡 *This build is 100% free. If it saved you time, you can leave an optional tip via [itch.io (Pay What You Want)](https://itch.io).*
+
+---
+
 # DriveLink Desktop
 
 **DriveLink Desktop** is the bridge application that allows you to use your Android phone as a high-performance racing game controller for Windows/Linux. It receives real-time motion and touch data from the DriveLink mobile app via UDP and translates it into virtual gamepad inputs. 
@@ -124,3 +141,5 @@ Contributions are very welcome for fixes for these!
 
 ---
 I hope you enjoy it!
+
+
