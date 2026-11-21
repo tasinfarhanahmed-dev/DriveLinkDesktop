@@ -1,0 +1,67 @@
+name: Build Clean Windows Portable Release
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Configure CMake
+        run: cmake -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build DriveLinkDesktop
+        run: cmake --build build --config Release --parallel
+
+      - name: Package Portable Release ZIP
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path release_pkg
+          $exe = Get-ChildItem -Path build -Filter "DriveLinkDesktop.exe" -Recurse | Select-Object -First 1
+          Copy-Item $exe.FullName -Destination release_pkg\
+          if (Test-Path "$($exe.DirectoryName)\assets") {
+            Copy-Item "$($exe.DirectoryName)\assets" -Destination release_pkg\assets -Recurse
+          } elseif (Test-Path "assets") {
+            Copy-Item "assets" -Destination release_pkg\assets -Recurse
+          }
+          Get-ChildItem -Path $exe.DirectoryName -Filter "*.dll" | Copy-Item -Destination release_pkg\
+          Compress-Archive -Path release_pkg\* -DestinationPath DriveLinkDesktop-Win64-Portable.zip -Force
+          $hash = (Get-FileHash DriveLinkDesktop-Win64-Portable.zip -Algorithm SHA256).Hash
+          "SHA256=$hash" | Out-File -FilePath $env:GITHUB_ENV -Append
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DriveLinkDesktop-Win64-Portable
+          path: DriveLinkDesktop-Win64-Portable.zip
+
+      - name: Publish GitHub Release (on version tag)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: DriveLinkDesktop-Win64-Portable.zip
+          body: |
+            ### Clean Cloud-Built Windows 64-bit Portable Release
+            Built automatically on GitHub's public `windows-latest` runners directly from this repository's visible source code.
+
+            #### Prerequisites
+            - Install the official signed **vJoy Virtual Joystick Driver** from [vJoy on SourceForge](https://sourceforge.net).
+
+            #### How to Run
+            1. Extract **`DriveLinkDesktop-Win64-Portable.zip`**.
+            2. Double-click **`DriveLinkDesktop.exe`** (no admin installation required).
+
+            #### Verification
+            - **SHA-256:** `${{ env.SHA256 }}`
